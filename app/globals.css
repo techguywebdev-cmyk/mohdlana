@@ -54,7 +54,7 @@
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-ink/15 bg-transparent px-6 py-3 text-sm font-semibold text-ink transition-colors duration-200 hover:border-ink/40;
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-[rgba(14,43,51,0.15)] bg-transparent px-6 py-3 text-sm font-semibold text-ink transition-colors duration-200 hover:border-[rgba(14,43,51,0.4)];
   }
 
   .btn-light {
@@ -62,7 +62,7 @@
   }
 
   .card-surface {
-    @apply rounded-xl2 border border-ink/8 bg-white/90 shadow-card backdrop-blur-sm;
+    @apply rounded-xl2 border border-[rgba(14,43,51,0.08)] bg-[rgba(255,255,255,0.9)] shadow-card backdrop-blur-sm;
   }
 }
 
