@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-paper text-ink font-body antialiased;
+    font-feature-settings: 'ss01' on, 'ss02' on;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display text-ink;
+  }
+
+  ::selection {
+    background-color: #ffc93c;
+    color: #0e2b33;
+  }
+
+  :focus-visible {
+    outline: 3px solid #d42768;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply font-mono text-[0.7rem] uppercase tracking-[0.22em] text-teal-600;
+  }
+
+  .container-page {
+    @apply mx-auto w-full max-w-[1180px] px-6 sm:px-8;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-bloom-400 px-6 py-3 text-sm font-semibold text-white shadow-pop transition-transform duration-200 hover:-translate-y-0.5 hover:bg-bloom-500 active:translate-y-0;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-ink/15 bg-transparent px-6 py-3 text-sm font-semibold text-ink transition-colors duration-200 hover:border-ink/40;
+  }
+
+  .btn-light {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-ink shadow-card transition-transform duration-200 hover:-translate-y-0.5;
+  }
+
+  .card-surface {
+    @apply rounded-xl2 border border-ink/8 bg-white/90 shadow-card backdrop-blur-sm;
+  }
+}
+
+.bg-grain::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: theme('backgroundImage.grain');
+  pointer-events: none;
+}
