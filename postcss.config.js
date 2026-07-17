@@ -45,9 +45,9 @@ const config: Config = {
         }
       },
       fontFamily: {
-        display: ['var(--font-fraunces)', 'ui-serif', 'Georgia', 'serif'],
-        body: ['var(--font-inter)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        mono: ['var(--font-mono)', 'ui-monospace', 'SFMono-Regular', 'monospace']
+        display: ['Fraunces', 'ui-serif', 'Georgia', 'serif'],
+        body: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        mono: ['"IBM Plex Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace']
       },
       borderRadius: {
         xl2: '1.25rem',
